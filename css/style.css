@@ -175,15 +175,15 @@ ul.nav li a {
     color: #000000;
 }
 
-ul.nav li a span.booking {
+/* ul.nav li a span.booking {
     background-color: #940049;
     padding: 5px 12px;
     border-radius: 5px;
     border: 1px solid #FFFFFF;
     transition: 2s;
-}
+} */
 
-ul.nav li a span.booking:hover {
+ul.nav li a span:hover {
     background-color: #FF9900;
 }
 
@@ -435,4 +435,11 @@ textarea {
     justify-content: space-between;
    
     padding: 10px; /* Optional: Add padding for better spacing */
+}
+.nav a.active {
+    color: white; /* Text color */
+    background-color: #6f0037; /* Background color */
+    font-weight: bold; /* Make it bold */
+    border-radius: 5px; /* Optional: rounded corners */
+    padding: 5px 10px; /* Optional: add padding */
 }

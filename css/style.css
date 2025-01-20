@@ -436,6 +436,15 @@ textarea {
    
     padding: 10px; /* Optional: Add padding for better spacing */
 }
+.nav a {
+    color: black; /* A darker text color for better visibility */
+    background-color: rgba(200, 200, 200, 0.2); /* Light gray with transparency */
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 6px 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); /* Soft shadow for a shaded look */
+}
+
 .nav a.active {
     color: white; /* Text color */
     background-color: #6f0037; /* Background color */

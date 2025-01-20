@@ -267,17 +267,48 @@ ul.nav li a span.booking:hover {
 
 
 .pop-dest {
+    
     box-shadow: 0px 0px 10px #898989;
+    width: 100%;
+    max-height: 400px; /* Adjust max height to fit the design */
+    object-fit: cover;
 }
 
 .pop-desc {
     padding: 10px 15px;
+    
 }
 
 .pop-desc h3 {
     padding: 0px;
-    margin: 0px 0 10px 0;
-    font-size: 20px;
+    /* margin: 0px 0 10px 0; */
+    /* font-size: 20px; */
+    margin: 10px 0 5px;
+    font-size: 18px;
+
+}
+.pop-desc p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* Limit to 3 lines */
+    -webkit-box-orient: vertical;
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+.pop-dest img {
+    width: 100%;         /* Make the image fill the column's width */
+    height: 200px;       /* Set a fixed height */
+    object-fit: cover;   /* Ensures the image covers the area without distorting */
+}
+@media (max-width: 768px) {
+    .thumb-height {
+        height: auto; /* Allow dynamic height for smaller screens */
+    }
+    .pop-dest img {
+        max-height: 120px;
+    }
 }
 
 .footer-wrapper {
@@ -393,6 +424,15 @@ textarea {
     margin: 0 0 15px 0;
 }
 
-.thumb-height {
+/* .thumb-height {
     min-height: 450px;
+} */
+.thumb-height {
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+    padding: 10px; /* Optional: Add padding for better spacing */
 }

@@ -6,7 +6,36 @@
     <title>Online Booking - MT 8848 JAPAN | Travel &amp; Tours</title>
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        /* Style the button */
+    .cbox input[type="submit"] {
+        background-color: #4CAF50; /* Green background */
+        color: white; /* White text */
+        border: none; /* Remove default border */
+        padding: 15px 32px; /* Add padding around the text */
+        text-align: center; /* Center text */
+        text-decoration: none; /* Remove underline */
+        display: inline-block; /* Allow styling like block elements */
+        font-size: 16px; /* Set font size */
+        margin: 4px 2px; /* Add margin */
+        cursor: pointer; /* Change cursor to pointer when hovered */
+        border-radius: 8px; /* Round corners */
+        transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+    }
 
+    /* Hover effect */
+    .cbox input[type="submit"]:hover {
+        background-color: #45a049; /* Darker green on hover */
+        transform: scale(1.05); /* Slightly increase button size */
+    }
+
+    /* Focus effect */
+    .cbox input[type="submit"]:focus {
+        outline: none; /* Remove outline */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add shadow on focus */
+    }
+
+    </style>
 </head>
 
 <body>
@@ -16,7 +45,7 @@
             <div class="row">
                 <div class="col-3 mob-view">
                     <a href="index.html"><img class="img-responsive"
-                            src="https://rajdimdung.github.io/web1-final-project/img/logo-mt8848.png"></a>
+                            src="images/logo.webp"></a>
                 </div> <!-- 25% -->
                 <div class="col-9">
                     <ul class="nav">
@@ -47,30 +76,23 @@
                     </div>
                     <div class="cbox">
                         <label>Gender:</label>
-                        <input type="radio" name="gender" value="Male"> Male <input type="radio" name="gender"
-                            value="Female"> Female <input type="radio" name="gender" value="Other"> Other
+                        <input type="radio" name="gender" value="Male"> Male 
+                        <input type="radio" name="gender" value="Female"> Female 
+                        <input type="radio" name="gender" value="Other"> Other
                     </div>
                     <div class="cbox">
                         <label>Email:</label>
-                        <input type="text" name="name" placeholder="Please enter your email address">
+                        <input type="text" name="email" placeholder="Please enter your email address">
                     </div>
                     <div class="cbox">
                         <label>Phone:</label>
-                        <input type="text" name="name" placeholder="Please enter your full name">
+                        <input type="text" name="phone" placeholder="Please enter your full name">
                     </div>
                     <div class="cbox">
                         <label>Country:</label>
-                        <input type="text" name="name" placeholder="Please enter country">
+                        <input type="text" name="country" placeholder="Please enter country">
                     </div>
-                    <div class="cbox">
-                        <label>Select Packages:</label>
-                        <select name="select-package">
-                            <option>Travel &amp; Tours</option>
-                            <option>Jungle Safari</option>
-                            <option>Treking &amp; Hiking</option>
-                            <option>Rafting &amp; Tour</option>
-                        </select>
-                    </div>
+    
                     <div class="cbox">
                         <label>Message (If Any)</label><br>
                         <textarea rows="10" cols="50"></textarea>
@@ -79,12 +101,35 @@
                         <label><input type="checkbox" name="agree"> I agree with term &amp; condition.</label>
                     </div>
                     <div class="cbox">
-                        <input type="submit" name="submit" value="Book Now">
+                        <input type="submit" id="submitBtn" name="submit" value="Book Now" onclick="submitForm()">
                     </div>
                 </div>
             </div>
         </div>
+    
+        <div id="successMessage" style="display: none; color: green; font-size: 16px; margin-top: 20px;">
+            <p>Booking successful! You will be redirected shortly...</p>
+        </div>
     </div>
+    
+    <script>
+        function submitForm() {
+            // Disable the submit button and show "Please Wait" text
+            document.getElementById('submitBtn').value = "Please Wait...";
+            document.getElementById('submitBtn').disabled = true;
+    
+            // Show success message
+            document.getElementById('successMessage').style.display = "block";
+    
+            // Simulate form processing and redirect after a delay
+            setTimeout(function() {
+                // Redirect to the homepage after 3 seconds
+                window.location.href = "https://nim-kavinda.github.io/tarvel-booking/index.html"; // Change to your homepage URL
+            }, 3000); // 3 seconds delay before redirecting
+        }
+    </script>
+    
+    
     <!-- /page -->
 
     <!-- footer -->
@@ -92,12 +137,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-4">
-                    <img src="https://rajdimdung.github.io/web1-final-project/img/logo-mt8848.png">
+                    <img src="https://rajdimdung.github.io/web1-final-project/img/logo-.png">
 
                 </div>
                 <div class="col-3">
                     <p><b>Contact Detail</b><br>
-                        email: mt8848@gmail.com<br>
+                        email: @gmail.com<br>
                         phone: +08092 736862<br>
                         line: +08092 736862
                     </p>
@@ -140,7 +185,7 @@
         </div>
     </div>
     <div class="copyright">
-        <p class="text-center">©MT8848 JAPAN 2022 Allright reserved.</p>
+        <p class="text-center">© JAPAN 2025 Allright reserved.</p>
     </div>
     <!-- /footer -->
 
